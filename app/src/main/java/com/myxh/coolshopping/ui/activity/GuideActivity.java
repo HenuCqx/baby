@@ -26,8 +26,8 @@ public class GuideActivity extends BaseActivity {
     private ViewPageAdapter mPageAdapter;
 
     private int[] imgRes = new int[] {
-            R.mipmap.guide_1,R.mipmap.guide_2,
-            R.mipmap.guide_3,R.mipmap.guide_4};
+            R.mipmap.ic_guide_1,R.mipmap.ic_guide_2,
+            R.mipmap.ic_guide_3,R.mipmap.ic_guide_4};
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
