@@ -86,7 +86,8 @@ public class HomeFragment extends BaseFragment implements HttpListener<String> {
 
     //是否正在刷新
     private boolean isRefreshing = false;
-    private TextView mCityName;
+    private  TextView mCityName;
+    public static String mCityNameString = "北京";
 
     @Nullable
     @Override
@@ -211,6 +212,7 @@ public class HomeFragment extends BaseFragment implements HttpListener<String> {
     private void initTitlebar(View view) {
         LinearLayout cityLayout = (LinearLayout) view.findViewById(R.id.titleBar_location_lay);
         mCityName = (TextView) view.findViewById(R.id.titleBar_city_name);
+
         cityLayout.setOnClickListener(new View.OnClickListener() {
             // TODO: 2018/5/31 位置选择点击事件
             @Override
@@ -274,6 +276,7 @@ public class HomeFragment extends BaseFragment implements HttpListener<String> {
                 String cityname = data.getStringExtra(AppConstant.KEY_CITY);
                 if (cityname != null) {
                     mCityName.setText(cityname);
+                    mCityNameString =  cityname;
                 }
             }
         }

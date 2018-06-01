@@ -2,6 +2,7 @@ package com.myxh.coolshopping.ui.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,6 +28,7 @@ public class CityListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
     private List<City> allCityList;
     public HashMap<String,Integer> alphaIndexer;
     private String[] sections;
+    static String cityStr;
 
     private String currentCity;
     private boolean isNeedFresh;
@@ -107,7 +109,12 @@ public class CityListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
                     locationCityHolder.tvFailure.setVisibility(View.VISIBLE);
                 } else {
                     String cityLocation = locations.get(0).getCity();
-                    final String cityStr = cityLocation.substring(0,cityLocation.length()-1);
+                    Log.d("cccccc" ,cityLocation);
+                    if (cityLocation != null){
+                        cityStr = cityLocation.substring(0,cityLocation.length()-1);
+                    }else {
+                        cityStr = null;
+                    }
                     locationCityHolder.tvCity.setVisibility(View.VISIBLE);
                     locationCityHolder.tvLocation.setVisibility(View.GONE);
                     locationCityHolder.tvFailure.setVisibility(View.GONE);
