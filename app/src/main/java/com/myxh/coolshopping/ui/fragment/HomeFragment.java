@@ -236,10 +236,13 @@ public class HomeFragment extends BaseFragment implements HttpListener<String> {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                EditText editText = (EditText)view.findViewById(R.id.sp);
-//                editText.setText("haha");
-                Intent intent = new Intent(getActivity(), ZeYuanActivity.class);
-                getActivity().startActivityForResult(intent,SCAN_QR_REQUEST);
+                EditText editText = (EditText)mView.findViewById(R.id.sp);
+                String searchTxt = editText.getText().toString();
+                if(searchTxt != null){
+                    Intent intent = new Intent(getActivity(), ZeYuanActivity.class);
+                    intent.putExtra("search_txt" ,searchTxt);
+                    getActivity().startActivityForResult(intent,SCAN_QR_REQUEST);
+                }
             }
         });
         ImageView messageBox = (ImageView) view.findViewById(R.id.titleBar_msg_iv);
