@@ -197,7 +197,7 @@ public class AroundFragment extends BaseFragment implements HttpListener<String>
         mSupplierListSort.setOnClickListener(this);
         mSupplierListActivity = (LinearLayout) view.findViewById(R.id.around_supplier_list_activity);
         mSupplierListActivity.setOnClickListener(this);
-        mListView = (ListView) view.findViewById(R.id.around_listView);
+        mListView = (ListView) view.findViewById(R.id.zeyuan);
 
         mListZeYuan =(com.handmark.pulltorefresh.library.PullToRefreshListView)view.findViewById(R.id.zeyuan);
         MyAdapter adapter = new MyAdapter(getActivity(), dataList);
