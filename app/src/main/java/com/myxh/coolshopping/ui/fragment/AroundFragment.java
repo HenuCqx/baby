@@ -48,7 +48,7 @@ public class AroundFragment extends BaseFragment implements HttpListener<String>
     private LinearLayout mSupplierListProduct;
     private LinearLayout mSupplierListSort;
     private LinearLayout mSupplierListActivity;
-    private ListView mListView;
+    private com.handmark.pulltorefresh.library.PullToRefreshListView mListView;
     private PullToRefreshListView mListZeYuan;
 
     private List<Map<String, String>> mMenuData1;
@@ -197,7 +197,7 @@ public class AroundFragment extends BaseFragment implements HttpListener<String>
         mSupplierListSort.setOnClickListener(this);
         mSupplierListActivity = (LinearLayout) view.findViewById(R.id.around_supplier_list_activity);
         mSupplierListActivity.setOnClickListener(this);
-        mListView = (ListView) view.findViewById(R.id.zeyuan);
+        mListView = (com.handmark.pulltorefresh.library.PullToRefreshListView) view.findViewById(R.id.zeyuan);
 
         mListZeYuan =(com.handmark.pulltorefresh.library.PullToRefreshListView)view.findViewById(R.id.zeyuan);
         MyAdapter adapter = new MyAdapter(getActivity(), dataList);
