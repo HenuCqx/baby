@@ -13,7 +13,9 @@ import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -27,13 +29,20 @@ import com.baidu.mapapi.SDKInitializer;
 import com.baidu.mapapi.map.BaiduMap;
 import com.baidu.mapapi.map.BitmapDescriptor;
 import com.baidu.mapapi.map.BitmapDescriptorFactory;
+import com.baidu.mapapi.map.InfoWindow;
 import com.baidu.mapapi.map.MapStatus;
 import com.baidu.mapapi.map.MapStatusUpdateFactory;
 import com.baidu.mapapi.map.MapView;
+import com.baidu.mapapi.map.Marker;
+import com.baidu.mapapi.map.MarkerOptions;
 import com.baidu.mapapi.map.MyLocationConfiguration;
 import com.baidu.mapapi.map.MyLocationData;
+import com.baidu.mapapi.map.OverlayOptions;
 import com.baidu.mapapi.model.LatLng;
 import com.myxh.coolshopping.R;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class LocationActivity extends AppCompatActivity implements SensorEventListener, View.OnClickListener {
 
@@ -50,7 +59,7 @@ public class LocationActivity extends AppCompatActivity implements SensorEventLi
     private double mCurrentLat = 0.0;
     private double mCurrentLon = 0.0;
     private float mCurrentAccracy;
-
+    private View mView = null;
     MapView mMapView;
     BaiduMap mBaiduMap;
 
@@ -62,6 +71,8 @@ public class LocationActivity extends AppCompatActivity implements SensorEventLi
     boolean isFirstLoc = true; // 是否首次定位
     private MyLocationData locData;
     private float direction;
+    static double mL1;
+    static double mL2;
 
     @SuppressLint("CutPasteId")
     @Override
@@ -158,6 +169,76 @@ public class LocationActivity extends AppCompatActivity implements SensorEventLi
         mLocClient.start();
     }
 
+    void setMarker(){
+        mBaiduMap.clear();
+        //设置坐标点
+        LatLng point1 = new LatLng(mL1 + 0.008000, mL2 - 0.003000);
+        LatLng point2 = new LatLng(mL1 + 0.030000, mL2 + 0.039000);
+        LatLng point3 = new LatLng(mL1 - 0.040000, mL2 - 0.028400);
+        LatLng point4 = new LatLng(mL1 + 0.020000, mL2 + 0.015000);
+        LatLng point5 = new LatLng(mL1 + 0.025655, mL2 - 0.015454);
+        LatLng point6 = new LatLng(mL1 - 0.018100, mL2 + 0.010000);
+
+        mView = LayoutInflater.from(LocationActivity.this).inflate(R.layout.layout_baidu_map_item, null);
+        ImageView mImg = (ImageView)mView.findViewById(R.id.img);
+        TextView mTv = (TextView)mView.findViewById(R.id.tv);
+
+        mImg.setImageDrawable(LocationActivity.this.getResources().getDrawable(R.drawable.ic_kindergarten_1));
+        mTv.setText("新中华幼儿园");
+        BitmapDescriptor bitmapDescriptor1 = BitmapDescriptorFactory
+                .fromView(mView);
+
+        mImg.setImageDrawable(LocationActivity.this.getResources().getDrawable(R.drawable.ic_kindergarten_5));
+        mTv.setText("周氏阳光幼儿园");
+        BitmapDescriptor bitmapDescriptor2 = BitmapDescriptorFactory
+                .fromView(mView);
+
+        mImg.setImageDrawable(LocationActivity.this.getResources().getDrawable(R.drawable.ic_kindergarten_8));
+        mTv.setText("小智慧家幼儿园");
+        BitmapDescriptor bitmapDescriptor3 = BitmapDescriptorFactory
+                .fromView(mView);
+
+        mImg.setImageDrawable(LocationActivity.this.getResources().getDrawable(R.drawable.ic_kindergarten_11));
+        mTv.setText("优启稚慧幼儿园");
+        BitmapDescriptor bitmapDescriptor4 = BitmapDescriptorFactory
+                .fromView(mView);
+
+        mImg.setImageDrawable(LocationActivity.this.getResources().getDrawable(R.drawable.ic_kindergarten_13));
+        mTv.setText("启蒙幼儿园");
+        BitmapDescriptor bitmapDescriptor5 = BitmapDescriptorFactory
+                .fromView(mView);
+
+        mImg.setImageDrawable(LocationActivity.this.getResources().getDrawable(R.drawable.ic_kindergarten_15));
+        mTv.setText("小天使幼儿园");
+        BitmapDescriptor bitmapDescriptor6 = BitmapDescriptorFactory
+                .fromView(mView);
+
+        OverlayOptions ooA1 = new MarkerOptions().position(point1)
+                .icon(bitmapDescriptor1).zIndex(9).draggable(true);
+        OverlayOptions ooA2 = new MarkerOptions().position(point2)
+                .icon(bitmapDescriptor2).zIndex(9).draggable(true);
+        OverlayOptions ooA3 = new MarkerOptions().position(point3)
+                .icon(bitmapDescriptor3).zIndex(9).draggable(true);
+        OverlayOptions ooA4 = new MarkerOptions().position(point4)
+                .icon(bitmapDescriptor4).zIndex(9).draggable(true);
+        OverlayOptions ooA5 = new MarkerOptions().position(point5)
+                .icon(bitmapDescriptor5).zIndex(9).draggable(true);
+        OverlayOptions ooA6 = new MarkerOptions().position(point6)
+                .icon(bitmapDescriptor6).zIndex(9).draggable(true);
+
+        //创建OverlayOptions的集合
+        List<OverlayOptions> options = new ArrayList<OverlayOptions>();
+
+        options.add(ooA1);
+        options.add(ooA2);
+        options.add(ooA3);
+        options.add(ooA4);
+        options.add(ooA5);
+        options.add(ooA6);
+        //在地图上批量添加
+        mBaiduMap.addOverlays(options);
+    }
+
     @Override
     public void onSensorChanged(SensorEvent sensorEvent) {
         double x = sensorEvent.values[SensorManager.DATA_X];
@@ -209,6 +290,9 @@ public class LocationActivity extends AppCompatActivity implements SensorEventLi
             if (location == null || mMapView == null) {
                 return;
             }
+            mL1 = location.getLatitude();
+            mL2 = location.getLongitude();
+            setMarker();
             mCurrentLat = location.getLatitude();
             mCurrentLon = location.getLongitude();
             mCurrentAccracy = location.getRadius();
@@ -223,12 +307,9 @@ public class LocationActivity extends AppCompatActivity implements SensorEventLi
                 LatLng ll = new LatLng(location.getLatitude(),
                         location.getLongitude());
                 MapStatus.Builder builder = new MapStatus.Builder();
-                builder.target(ll).zoom(18.0f);
+                builder.target(ll).zoom(14.0f);
                 mBaiduMap.animateMapStatus(MapStatusUpdateFactory.newMapStatus(builder.build()));
             }
-        }
-
-        public void onReceivePoi(BDLocation poiLocation) {
         }
     }
 

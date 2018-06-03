@@ -106,7 +106,8 @@ public class AroundFragment extends BaseFragment implements HttpListener<String>
                 R.drawable.ic_kindergarten_4, R.drawable.ic_kindergarten_5, R.drawable.ic_kindergarten_6, R.drawable.ic_kindergarten_7,
                 R.drawable.ic_kindergarten_8, R.drawable.ic_kindergarten_9, R.drawable.ic_kindergarten_10, R.drawable.ic_kindergarten_11,
                 R.drawable.ic_kindergarten_12, R.drawable.ic_kindergarten_13, R.drawable.ic_kindergarten_14, R.drawable.ic_kindergarten_15};
-        title = new String[]{"新中华幼儿园",
+        title = new String[]{
+                "新中华幼儿园",
                 "未来之星幼儿园",
                 "123蒙氏多元幼儿园",
                 "动100国际幼儿园",
