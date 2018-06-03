@@ -104,6 +104,7 @@
             android:background="#e4e4e4" />
 
         <RelativeLayout
+            android:visibility="gone"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:orientation="horizontal"
