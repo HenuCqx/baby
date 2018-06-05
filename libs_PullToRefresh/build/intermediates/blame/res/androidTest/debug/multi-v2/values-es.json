@@ -1,6 +1,21 @@
 {
     "logs": [
         {
+            "outputFile": "E:\\AndroidStudioProjects\\baby\\libs_PullToRefresh\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-es\\values-es.xml",
+            "map": [
+                {
+                    "source": "E:\\AndroidStudioProjects\\baby\\libs_PullToRefresh\\build\\intermediates\\bundles\\debug\\res\\values-es\\values-es.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,133,204",
+                        "endColumns": "77,70,81",
+                        "endOffsets": "128,199,281"
+                    }
+                }
+            ]
+        },
+        {
             "outputFile": "C:\\home\\wber\\视频\\baby\\libs_PullToRefresh\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-es\\values-es.xml",
             "map": [
                 {
@@ -50,6 +65,21 @@
             "map": [
                 {
                     "source": "C:\\Users\\Mr.C\\Desktop\\android\\baby\\libs_PullToRefresh\\build\\intermediates\\bundles\\debug\\res\\values-es\\values-es.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,133,204",
+                        "endColumns": "77,70,81",
+                        "endOffsets": "128,199,281"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "E:\\AndroidStudioProjects\\baby\\libs_PullToRefresh\\build\\intermediates\\res\\merged\\androidTest\\debug\\values-es\\values-es.xml",
+            "map": [
+                {
+                    "source": "E:\\AndroidStudioProjects\\baby\\libs_PullToRefresh\\build\\intermediates\\bundles\\debug\\res\\values-es\\values-es.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",

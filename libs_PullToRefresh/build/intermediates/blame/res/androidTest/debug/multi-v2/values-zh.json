@@ -1,6 +1,21 @@
 {
     "logs": [
         {
+            "outputFile": "C:\\home\\wber\\视频\\baby\\libs_PullToRefresh\\build\\intermediates\\res\\merged\\androidTest\\debug\\values-zh\\values-zh.xml",
+            "map": [
+                {
+                    "source": "C:\\home\\wber\\视频\\baby\\libs_PullToRefresh\\build\\intermediates\\bundles\\debug\\res\\values-zh\\values-zh.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,118,186",
+                        "endColumns": "62,67,67",
+                        "endOffsets": "113,181,249"
+                    }
+                }
+            ]
+        },
+        {
             "outputFile": "C:\\Users\\Mr.C\\Desktop\\android\\baby\\libs_PullToRefresh\\build\\intermediates\\res\\merged\\androidTest\\debug\\values-zh\\values-zh.xml",
             "map": [
                 {
@@ -31,10 +46,10 @@
             ]
         },
         {
-            "outputFile": "C:\\home\\wber\\视频\\baby\\libs_PullToRefresh\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-zh\\values-zh.xml",
+            "outputFile": "E:\\AndroidStudioProjects\\baby\\libs_PullToRefresh\\build\\intermediates\\res\\merged\\androidTest\\debug\\values-zh\\values-zh.xml",
             "map": [
                 {
-                    "source": "C:\\home\\wber\\视频\\baby\\libs_PullToRefresh\\build\\intermediates\\bundles\\debug\\res\\values-zh\\values-zh.xml",
+                    "source": "E:\\AndroidStudioProjects\\baby\\libs_PullToRefresh\\build\\intermediates\\bundles\\debug\\res\\values-zh\\values-zh.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",
@@ -46,7 +61,22 @@
             ]
         },
         {
-            "outputFile": "C:\\home\\wber\\视频\\baby\\libs_PullToRefresh\\build\\intermediates\\res\\merged\\androidTest\\debug\\values-zh\\values-zh.xml",
+            "outputFile": "E:\\AndroidStudioProjects\\baby\\libs_PullToRefresh\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-zh\\values-zh.xml",
+            "map": [
+                {
+                    "source": "E:\\AndroidStudioProjects\\baby\\libs_PullToRefresh\\build\\intermediates\\bundles\\debug\\res\\values-zh\\values-zh.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,118,186",
+                        "endColumns": "62,67,67",
+                        "endOffsets": "113,181,249"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "C:\\home\\wber\\视频\\baby\\libs_PullToRefresh\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-zh\\values-zh.xml",
             "map": [
                 {
                     "source": "C:\\home\\wber\\视频\\baby\\libs_PullToRefresh\\build\\intermediates\\bundles\\debug\\res\\values-zh\\values-zh.xml",
