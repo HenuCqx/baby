@@ -1,6 +1,4 @@
-<resources
-    xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation"
-    >
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
     <string name="app_name">掌心Baby</string>
     <string name="tab_title_home">首页</string>
     <string name="tab_title_view">宝贝窗口</string>

@@ -1,66 +1,6 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Mr.C\\Desktop\\android\\baby\\libs_PullToRefresh\\build\\intermediates\\res\\merged\\androidTest\\debug\\values-ja\\values-ja.xml",
-            "map": [
-                {
-                    "source": "C:\\Users\\Mr.C\\Desktop\\android\\baby\\libs_PullToRefresh\\build\\intermediates\\bundles\\debug\\res\\values-ja\\values-ja.xml",
-                    "from": {
-                        "startLines": "2,3,4",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "55,120,188",
-                        "endColumns": "64,67,66",
-                        "endOffsets": "115,183,250"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "C:\\home\\wber\\视频\\baby\\libs_PullToRefresh\\build\\intermediates\\res\\merged\\androidTest\\debug\\values-ja\\values-ja.xml",
-            "map": [
-                {
-                    "source": "C:\\home\\wber\\视频\\baby\\libs_PullToRefresh\\build\\intermediates\\bundles\\debug\\res\\values-ja\\values-ja.xml",
-                    "from": {
-                        "startLines": "2,3,4",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "55,120,188",
-                        "endColumns": "64,67,66",
-                        "endOffsets": "115,183,250"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "C:\\Users\\Mr.C\\Desktop\\android\\baby\\libs_PullToRefresh\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-ja\\values-ja.xml",
-            "map": [
-                {
-                    "source": "C:\\Users\\Mr.C\\Desktop\\android\\baby\\libs_PullToRefresh\\build\\intermediates\\bundles\\debug\\res\\values-ja\\values-ja.xml",
-                    "from": {
-                        "startLines": "2,3,4",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "55,120,188",
-                        "endColumns": "64,67,66",
-                        "endOffsets": "115,183,250"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "C:\\home\\wber\\视频\\baby\\libs_PullToRefresh\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-ja\\values-ja.xml",
-            "map": [
-                {
-                    "source": "C:\\home\\wber\\视频\\baby\\libs_PullToRefresh\\build\\intermediates\\bundles\\debug\\res\\values-ja\\values-ja.xml",
-                    "from": {
-                        "startLines": "2,3,4",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "55,120,188",
-                        "endColumns": "64,67,66",
-                        "endOffsets": "115,183,250"
-                    }
-                }
-            ]
-        },
-        {
             "outputFile": "E:\\AndroidStudioProjects\\baby\\libs_PullToRefresh\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-ja\\values-ja.xml",
             "map": [
                 {

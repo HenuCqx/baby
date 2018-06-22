@@ -5,18 +5,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.myxh.coolshopping.ui.activity.DetailActivity">
+    tools:context="com.myxh.baby.ui.activity.DetailActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/detail_layout_buy"
         tools:ignore="UnknownId">
-        <com.myxh.coolshopping.ui.widget.ObserverScrollView
+        <com.myxh.baby.ui.widget.ObserverScrollView
             android:id="@+id/detail_scroll_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-        </com.myxh.coolshopping.ui.widget.ObserverScrollView>
+        </com.myxh.baby.ui.widget.ObserverScrollView>
 
         <LinearLayout
             android:id="@+id/detail_title_layout"
